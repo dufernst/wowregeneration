@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Threading;
+using System.Windows.Forms;
 using WoWRegeneration.Repositories;
 using WoWRegeneration.UI;
 
@@ -17,6 +18,9 @@ namespace WoWRegeneration.Data
             BasePath = repository.GetDefaultDirectory();
 
             Progress = new ConsoleDownloadProgressBar(Files.Count);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new UI.ProgressBar());
         }
 
         private List<FileObject> Files { get; set; }

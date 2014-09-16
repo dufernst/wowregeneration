@@ -38,6 +38,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +53,11 @@
     <Compile Include="Data\Session.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\WoW51016357.cs" />
     <Compile Include="Repositories\WoWRepository.cs" />
     <Compile Include="Repositories\RepositoriesManager.cs" />
@@ -59,12 +66,57 @@
     <Compile Include="Repositories\WoW54117538.cs" />
     <Compile Include="Repositories\WoW54717956.cs" />
     <Compile Include="Repositories\WoW54718019.cs" />
+    <Compile Include="UI\AnimatedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\ConsoleDownloadProgressBar.cs" />
+    <Compile Include="UI\ProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProgressBar.Designer.cs">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserInputs.cs" />
     <Compile Include="WoWRegeneration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00017[800x120x24BPP].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00003[595x9x24BPP].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00004[12x9x24BPP].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00005[595x9x24BPP].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00024[17x7x24BPP].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play-No-Hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
