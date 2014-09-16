@@ -38,7 +38,7 @@ namespace WoWRegeneration
             string locale = UserInputs.SelectLocale(manifest);
             string os = UserInputs.SelectOs();
 
-            CurrentSession = new Session(repository.GetMFilName(), locale, os);
+            CurrentSession = new Session(repository.GetMFilName(), locale, os, 0);
             CurrentSession.SaveSession();
 
             StartProcess(manifest);

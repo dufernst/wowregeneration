@@ -70,6 +70,7 @@ namespace WoWRegeneration.Data
 
         private void DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            WoWRegeneration.CurrentSession.CurrentBytes += (ulong)(CurrentFile.Info.Length);
             WoWRegeneration.CurrentSession.CompletedFiles.Add(CurrentFile.Path);
             WoWRegeneration.CurrentSession.SaveSession();
             CurrentFileIndex = CurrentFileIndex + 1;

@@ -17,12 +17,13 @@ namespace WoWRegeneration.Data
             SessionCompleted = false;
         }
 
-        public Session(string mfil, string locale, string os)
+        public Session(string mfil, string locale, string os, ulong cbytes)
             : this()
         {
             MFil = mfil;
             Locale = locale;
             Os = os;
+            CurrentBytes = cbytes;
             WoWRepository rep = RepositoriesManager.GetRepositoryByMfil(mfil);
             if (rep == null)
                 throw new Exception("Unknow mfil file");
@@ -35,6 +36,7 @@ namespace WoWRegeneration.Data
         public string Locale { get; set; }
         public string Os { get; set; }
         public List<string> CompletedFiles { get; set; }
+        public ulong CurrentBytes { get; set; }
 
         public static Session LoadSession()
         {
