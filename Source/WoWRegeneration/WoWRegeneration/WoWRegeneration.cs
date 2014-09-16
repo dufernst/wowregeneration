@@ -18,15 +18,15 @@ namespace WoWRegeneration
             {
                 EntryPointNewSession();
             }
-            else if (previousSession.SessionCompleted)
+            /*else if (previousSession.SessionCompleted)
             {
                 EntryPointNewSession();
-            }
+            }*/
             else
             {
-                if (!UserInputs.SelectContinueSession(previousSession))
+                /*if (!UserInputs.SelectContinueSession(previousSession))
                     EntryPointNewSession();
-                else
+                else*/
                     EntryPointResumeSession(previousSession);
             }
         }

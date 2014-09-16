@@ -52,7 +52,7 @@ namespace WoWRegeneration.UI
                 SetText("Downloaded  : " + AlignText(HumanReadableByteCount(bytesReceived), 50, false),
                         ConsoleColor.Yellow, 0, y + 4);
                 SetText(
-                    "Pourcent    : " + AlignText(pourcentage.ToString(CultureInfo.InvariantCulture) + "%", 50, false),
+                    "Percent    : " + AlignText(pourcentage.ToString(CultureInfo.InvariantCulture) + "%", 50, false),
                     ConsoleColor.Yellow, 0, y + 5);
 
                 Console.CursorTop = y;

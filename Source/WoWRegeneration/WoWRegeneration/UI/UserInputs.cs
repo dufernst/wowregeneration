@@ -18,9 +18,9 @@ namespace WoWRegeneration.UI
                             item.GetVersionName());
             }
             Program.Log();
-            Program.Log("Select version :");
-            int selectedIndex = HandleUserParams(RepositoriesManager.Repositories.Count);
-            return RepositoriesManager.Repositories[selectedIndex];
+            //Program.Log("Select version :");
+            //int selectedIndex = HandleUserParams(RepositoriesManager.Repositories.Count);
+            return RepositoriesManager.Repositories[1];
         }
 
         public static string SelectLocale(ManifestFile manifest)
@@ -34,8 +34,8 @@ namespace WoWRegeneration.UI
             }
             Program.Log();
             Program.Log("Select locale :");
-            int selectedIndex = HandleUserParams(locales.Count);
-            return locales[selectedIndex];
+            //int selectedIndex = HandleUserParams(locales.Count);
+            return locales[2];
         }
 
         public static string SelectOs()
@@ -49,8 +49,8 @@ namespace WoWRegeneration.UI
             }
             Program.Log();
             Program.Log("Select OS :");
-            int selectedIndex = HandleUserParams(os.Count);
-            return os[selectedIndex];
+            //int selectedIndex = HandleUserParams(os.Count);
+            return os[0];
         }
 
         public static bool SelectContinueSession(Session previousSession)
